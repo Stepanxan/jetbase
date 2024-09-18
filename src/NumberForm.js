@@ -6,6 +6,7 @@ const NumberForm = () => {
   const [N, setN] = useState(10000000000);
   const [results, setResults] = useState(null);
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await fetch('http://localhost:5000/find-missing', {
