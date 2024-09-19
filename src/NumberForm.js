@@ -40,8 +40,6 @@ const NumberForm = () => {
           <p>Пропущене число №1: {results.missing1}</p>
           <p>Пропущене число №2: {results.missing2}</p>
           <p>Метод суми квадратів: {results.sum_squares[0].join(', ')} (Час: {results.sum_squares[1]}с)</p>
-          {/*<p>Лінійне порівняння: {results.linear[0].join(', ')} (Time: {results.linear[1]}s)</p>*/}
-          {/*<p>Метод "XOR": {results.xor[0].join(', ')} (Time: {results.xor[1]}s)</p>*/}
         </div>
       )}
     </div>

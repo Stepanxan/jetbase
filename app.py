@@ -27,38 +27,6 @@ def find_missing_numbers_sum_squares(N, missing1, missing2):
     y = sum_missing - x
     return x, y
 
-# def find_missing_numbers_linear(N, missing1, missing2):
-#     missing = []
-#     for num in range(1, N + 1):
-#         if num != missing1 and num != missing2:
-#             missing.append(num)
-#             if len(missing) == 2:
-#                 return missing
-#     return missing
-#
-# def find_missing_numbers_xor(N, missing1, missing2):
-#     xor_all = 0
-#     xor_missing = 0
-#     for i in range(1, N + 1):
-#         xor_all ^= i
-#     xor_missing = xor_all ^ missing1 ^ missing2
-#     bit_flag = xor_missing & -xor_missing
-#     x = 0
-#     y = 0
-#     for i in range(1, N + 1):
-#         if i & bit_flag:
-#             x ^= i
-#         else:
-#             y ^= i
-#     if missing1 & bit_flag:
-#         x ^= missing1
-#     else:
-#         y ^= missing1
-#     if missing2 & bit_flag:
-#         x ^= missing2
-#     else:
-#         y ^= missing2
-#     return x, y
 
 def benchmark(func, N, missing1, missing2):
     start_time = time.time()
@@ -77,8 +45,6 @@ def find_missing():
         'missing1': missing1,
         'missing2': missing2,
         'sum_squares': benchmark(find_missing_numbers_sum_squares, N, missing1, missing2),
-        # 'linear': benchmark(find_missing_numbers_linear, N, missing1, missing2),
-        # 'xor': benchmark(find_missing_numbers_xor, N, missing1, missing2)
     }
 
     return jsonify(results)
